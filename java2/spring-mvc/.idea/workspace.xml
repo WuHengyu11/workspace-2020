@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2260c75c-c74c-4d07-8451-baa684e334c0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/developTools/apache-maven-3.2.5" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZpLSkfznbdw2a2s6PmKxFHv5QB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2260c75c-c74c-4d07-8451-baa684e334c0" name="Default Changelist" comment="" />
+      <created>1585531090177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585531090177</updated>
+      <workItem from="1585531092358" duration="292000" />
+      <workItem from="1585531900725" duration="643000" />
+      <workItem from="1585532561705" duration="786000" />
+      <workItem from="1585533371733" duration="2226000" />
+      <workItem from="1585537510659" duration="215000" />
+      <workItem from="1585537804070" duration="208000" />
+      <workItem from="1585538111315" duration="2000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1032" y="178" key="#Project_Structure" timestamp="1585534217908">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1585534217908" />
+    <state x="1245" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1585533664819">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1245" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585533664819" />
+    <state x="922" y="139" key="SettingsEditor" timestamp="1585537952372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="139" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585537952372" />
+    <state x="1161" y="265" width="540" height="540" key="StructurePopup" timestamp="1585533861276">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1161" y="265" width="540" height="540" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1585533861276" />
+    <state x="669" y="129" key="new project wizard" timestamp="1585537316917">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585537316917" />
+    <state x="1103" y="229" key="search.everywhere.popup" timestamp="1585533842636">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="229" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585533842636" />
+  </component>
+</project>

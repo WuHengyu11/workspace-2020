@@ -1,0 +1,11 @@
+package cn.wolfcode.javaweb.query;
+
+/**
+ * f封装用户传过来的参数,sql中需要使用
+ * @author Administrator
+ *
+ */
+public class QueryObject {
+	private int currentPage;
+	private intpageSize
+}

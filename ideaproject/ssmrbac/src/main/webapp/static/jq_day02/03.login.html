@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/jQuery-1.11/jquery-1.11.3.js"></script>
+    <script>
+        $(function () {
+            $('#login').click(function () {
+                var u = $('#username').val();
+                var p = $('#password').val();
+                $.post('/login.do',{username:u,password:p},function (data) {
+                    $('#result').html(data.msg)
+                        .css('color',data.success?'green':'red');
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <span id="result"></span><br>
+    用户名：<input id="username" name="username">
+    密码：<input id="password" name="password">
+    <button id="login">登录</button>
+</body>
+</html>

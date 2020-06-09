@@ -1,0 +1,6 @@
+package cn.wolfcode.rbac.test;
+
+@RunWith()
+public class AccountTest {
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <link rel="stylesheet" href="js/bootstrap-datepicker/css/bootstrap-datepicker.css">
+
+</head>
+<body>
+<div class="form-group">
+    <label>时间段查询:</label>
+    <div class="input-daterange input-group" id="datepicker">
+        <input type="text" class="input-sm form-control" name="startDate"
+               value= >
+        <span class="input-group-addon">到</span>
+        <input type="text" class="input-sm form-control" name="endDate"
+               value="">
+    </div>
+</div>
+<script>
+    $('#datepicker input-sm').datepicker({
+        language: "zh-CN",
+        autoclose: true,
+        todayHighlight: true,
+        clearBtn: true
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery 常用方法</title>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+	$(function () {
+		//获取p标签的个数
+		console.log($("p").size());
+
+		//获取id为username元素的value属性值
+		console.log($("#username").val())
+
+		//问题3:设置id为username元素的value属性值为"叩丁狼教育"
+		$("#username").val("叩丁狼教育")
+
+		// 问题4:对比h1元素的内容和纯文本的区别
+		console.log($("#h1").html());
+		console.log($("#h1").text());
+
+		// 问题5:把h1元素内容的颜色改为黄色
+		$("#h1").css("color", "yellow");
+	});
+</script>
+</head>
+<body>
+	<h1 id="h1">做人<i>要低调</i></h1>
+	<input type="text" id="username" value="wolfcode"/><br/><br/>
+	
+	<div>
+		jQuery常用方法:<br/>
+		jQuery对象.size();	//获取jQuery中包含DOM的个数<br/>
+		jQuery对象.val();	//操作元素的value属性<br/>
+		jQuery对象.html(); 	//操作元素内的HTML代码<br/>
+		jQuery对象.text(); 	//操作元素内的文本,忽略HTML标签br/>
+		jQuery对象.css(); 	//操作元素的 style 属性
+	</div>
+	<hr/>
+	<div>
+		<p>
+			问题1:获取jQuery中包含DOM的个数
+			
+		</p>
+		<p>
+			问题2:获取id为username元素的value属性值
+			
+		</p>
+		<p>
+			问题3:设置id为username元素的value属性值为"叩丁狼教育"
+			
+		</p>
+		<p>
+			问题4:对比h1元素的内容和纯文本的区别
+			
+		</p>
+		<p>
+			问题5:把h1元素内容的颜色改为黄色
+		</p>
+	</div>
+</body>
+</html>

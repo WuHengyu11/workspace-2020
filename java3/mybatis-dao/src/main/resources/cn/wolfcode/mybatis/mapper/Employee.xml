@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.mybatis.mapper.EmployeeMapper">	
+	<insert id="save" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO employee VALUES(null,#{name}, #{sn},#{salary},#{deptid})
+	</insert>
+	<update id="update">
+		UPDATE employee
+		<set>
+			<if test="name != null">name = #{name},</if>
+			<if test="sn != null">sn = #{sn},</if>
+			<if test="salary != null">salary = #{salary},</if>
+			<if test="deptid != null">deptId = #{deptid},</if>
+		</set>
+		WHERE id = #{id}
+	</update>
+	<select id="get" resultType="Employee">
+		SELECT * FROM employee WHERE id = #{id}
+	</select>
+	
+	<delete id="delete">
+		DELETE FROM employee WHERE id IN
+		<foreach collection="array" open="(" close=")" separator="," item="id">
+			#{id}
+		</foreach>
+	</delete>
+	
+	<select id="selectAll" resultType="Employee">
+		SELECT * FROM employee
+	</select>
+	
+	<select id="queryByMinSalaryAndMaxSalary" resultType="Employee">
+		SELECT * FROM employee
+		<where>
+			<if test="minSalary != null">
+				AND salary &gt;= #{minSalary}
+			</if>
+			<if test="maxSalary != null">
+				AND salary &lt;= #{maxSalary}
+			</if>
+		</where>
+	</select>
+</mapper>

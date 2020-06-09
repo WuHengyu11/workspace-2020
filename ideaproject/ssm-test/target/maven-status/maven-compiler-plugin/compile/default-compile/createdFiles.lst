@@ -1,0 +1,8 @@
+cn\wolfcode\qo\QueryObject.class
+cn\wolfcode\qo\PageResult.class
+cn\wolfcode\mapper\UserMapper.class
+cn\wolfcode\service\impl\UserServiceImpl.class
+cn\wolfcode\service\IUserService.class
+cn\wolfcode\web\controller\UserController.class
+cn\wolfcode\domain\User.class
+cn\wolfcode\qo\UserQueryObject.class

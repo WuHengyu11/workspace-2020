@@ -1,0 +1,7 @@
+package cn.wolfcode.rbac.mapper;
+
+import java.math.BigDecimal;
+
+public interface AccountMapper {
+	void addBalance(Long id,BigDecimal amount);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/jQuery-1.11/jquery-1.11.3.js"></script>
+    <script>
+        $(function () {
+            var $cities = $('#cities');
+            var $provinces = $('#provinces')
+            $.get('/getProvinces.do',function (data) {
+                data.forEach(function (value) {
+                    $province.append('<option value="'+value.id+'">'+value.name+'</option>');
+                });
+            });
+           $provinces.change(function () {
+               var  provinceId = $(this).val();
+               $cities.empty();
+               $cities.append('<option value="-1">请选择</option>');
+               if(provinceId>0){
+                   $.get('/getCities.do',{provinceId:provinceId},function (data) {
+                       data.forEach(function (value) {
+                           $province.append('<option value="'+value.id+'">'+value.name+'</option>');
+                       });
+                   });
+               }
+
+           });
+        });
+    </script>
+</head>
+<body>
+    省份：<select>
+        <option value="-1">请选择</option>
+
+    </select>
+    城市：<select>
+        <option value="-1">请选择</option>
+    </select>
+</body>
+</html>

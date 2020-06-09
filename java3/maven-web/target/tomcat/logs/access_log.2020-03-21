@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [21/Mar/2020:15:41:44 +0800] "GET /hello HTTP/1.1" 200 144 http-bio-80-exec-1 920
+0:0:0:0:0:0:0:1 - - [21/Mar/2020:15:41:44 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-80-exec-3 2
+192.168.0.100 - - [21/Mar/2020:15:55:07 +0800] "GET /hello HTTP/1.1" 200 144 http-bio-80-exec-5 4
+192.168.0.100 - - [21/Mar/2020:15:55:07 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-80-exec-6 2

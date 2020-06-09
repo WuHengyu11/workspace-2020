@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: error:spring-aop:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/error/spring-aop/unknown/spring-aop-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/error/spring-aop/unknown/spring-aop-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/error/spring-aop/unknown/spring-aop-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

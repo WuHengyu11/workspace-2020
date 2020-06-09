@@ -1,0 +1,7 @@
+1585062256400	Rename type 'Department'
+1585062287350	Rename type 'Employee'
+1585062469042	Rename resource 'EmployeeMapper.xml'
+1585062532032	Rename resource 'DepartmentMapper.xml'
+1585062602854	Rename type 'DepartmentMapper'
+1585062644806	Rename type 'EmployeeMapper'
+1585062654991	Rename type 'EmployeeMapperTest'

@@ -1,0 +1,12 @@
+package cn.wolfcode.javaweb.query;
+
+/**
+ * 封装用户需要的数据
+ * @author Administrator
+ *
+ */
+public class PageResult {
+	
+	//用户传递的参数
+	private Integer currentPage;//当前页
+}

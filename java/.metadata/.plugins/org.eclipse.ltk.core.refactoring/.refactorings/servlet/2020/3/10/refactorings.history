@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;webapp&apos; to &apos;registe&apos;&#x0D;&#x0A;- Original project: &apos;servlet&apos;&#x0D;&#x0A;- Destination element: &apos;registe&apos;&#x0D;&#x0A;- Original element: &apos;webapp&apos;" description="Copy folder" destination="=registe" element1="webapp" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1583563119986" units="0" version="1.0"/>
+</session>

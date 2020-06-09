@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1">
+	<servlet>
+		<servlet-name>RegisteServlet</servlet-name>
+		<!-- servlet类的全限定名 -->
+		<servlet-class>cn.wolfcode.registe.RegisteServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>RegisteServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ResponseServlet</servlet-name>
+		<!-- servlet类的全限定名 -->
+		<servlet-class>cn.wolfcode.response.ResponseServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ResponseServlet</servlet-name>
+		<url-pattern>/response</url-pattern>
+	</servlet-mapping>
+</web-app>

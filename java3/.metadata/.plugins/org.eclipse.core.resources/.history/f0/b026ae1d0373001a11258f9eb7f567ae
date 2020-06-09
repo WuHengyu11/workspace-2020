@@ -1,0 +1,8 @@
+package cn.wolfcode.web.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HelloController {
+	//提供方法处理请求
+}

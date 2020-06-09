@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery 常用方法</title>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function () {
+        var btnELe=document.getElementById("btn");
+        console.log(btnELe.id);//DOM对象
+
+     	var $btn = $('#btn')
+        console.log($btn.id);//jquery对象
+
+		var $btn2 = jQuery('#btn');
+		console.log($btn2);
+
+        console.log($ === jQuery);
+
+        //DOM对象转换为jQuery对象
+        console.log($(btnELe));
+
+    });
+</script>
+
+</head>
+<body>
+	<button id="btn">点击</button>
+</body>
+</html>

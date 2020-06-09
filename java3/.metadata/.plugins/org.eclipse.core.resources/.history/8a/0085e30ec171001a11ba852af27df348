@@ -1,0 +1,5 @@
+package cn.wolfcode.rbac.service;
+
+public interface AccountService {
+
+}

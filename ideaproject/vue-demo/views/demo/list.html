@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/jquery/jquery.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a href="input.html">添加</a>
+        <ul>
+            <li v-for="u in users">
+                {{u.id}}--{{u.name}}--{{u.age}}--{{u.hobby}}<a :href="'input.html?id='+u.id">编辑</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var baseUrl="http://localhost:8888/";
+        var vue = new Vue({
+            el:"#app",
+            data:{
+                users:[]
+            },
+            mounted:function () {
+                //给users属性进行初始化
+                //用户列表数据:在mongodb中,而mongodb-demo项目暴露了一个接口
+                $.get(baseUrl + "/users/list",{},function (data) {
+                    if(data.success){
+                        vue.users = data.data;
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+</html>

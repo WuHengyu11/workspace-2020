@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.javaweb2.mapper.EmployeeMapper">
+
+	<!-- 插入语句 -->
+	<insert id="insert">
+		insert into employee values(null,#{name},#{email},#{age},#{salary},#{birthday})
+	</insert>
+	
+	<!-- 删除语句 -->
+	<delete id="delete">
+		delete from employee where id=#{id}
+	</delete>
+	
+	<!-- 更新语句 -->
+	<update id="update">
+		update employee set name=#{name},email=#{email},age=#{age},salary=#{salary},birthday=#{birthday} where id=#{id}
+	</update>
+	
+	<!-- 单条查询语句 -->
+	<select id="selectOne" resultType="employee">
+		select * from employee where id=#{id}
+	</select>
+	
+	<!-- 多条查询语句 -->
+	<select id="selectAll" resultType="employee">
+		select * from employee
+	</select>
+</mapper>

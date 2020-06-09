@@ -1,0 +1,10 @@
+package cn.wolfcode.web.controller;
+
+import org.springframework.web.servlet.ModelAndView;
+
+public class HelloController {
+	public ModelAndView sayHello(){
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("/WEB_INF/views/welcome.jsp");
+	}
+}

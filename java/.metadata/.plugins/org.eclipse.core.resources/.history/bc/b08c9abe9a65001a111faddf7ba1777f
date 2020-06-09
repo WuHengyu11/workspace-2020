@@ -1,0 +1,10 @@
+package cn.wolfcode.javaweb.query;
+
+/**
+ * 封装用户需要的数据
+ * @author Administrator
+ *
+ */
+public class PageResult {
+
+}

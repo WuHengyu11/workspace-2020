@@ -1,0 +1,5 @@
+package cn.wolfcode.register.service;
+
+public interface IStudentService {
+	void register();
+}

@@ -1,0 +1,5 @@
+package cn.wolfcode.register.dao;
+
+public interface IStudentDAO {
+	void register(String username,String password)
+}

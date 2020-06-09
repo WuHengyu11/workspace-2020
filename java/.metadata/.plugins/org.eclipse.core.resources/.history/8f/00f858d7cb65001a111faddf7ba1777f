@@ -1,0 +1,114 @@
+package cn.wolfcode.javaweb.impl;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import cn.wolfcode.javaweb.dao.IProductDAO;
+import cn.wolfcode.javaweb.domain.Product;
+import cn.wolfcode.javaweb.query.QueryObject;
+import cn.wolfcode.javaweb.util.MybatisUtil;
+
+public class ProductDAOImpl implements IProductDAO {
+
+	@Override
+	public void insert(Product pt) {
+		//获取连接
+		SqlSession session = MybatisUtil.getConnection();
+		
+		//执行sql
+		session.insert("cn.wolfcode.javaweb.mappper.ProductMapper.insert",pt);
+		
+		//执行事务
+		session.commit();
+		
+		//释放资源
+		session.close();
+	}
+
+	@Override
+	public void delete(long id) {
+		//获取连接
+		SqlSession session = MybatisUtil.getConnection();
+		
+		//执行sql
+		session.delete("cn.wolfcode.javaweb.mappper.ProductMapper.delete",id);
+		
+		//执行事务
+		session.commit();
+		
+		//释放资源
+		session.close();
+
+	}
+
+	@Override
+	public void update(Product pt) {
+		//获取连接
+		SqlSession session = MybatisUtil.getConnection();
+		
+		//执行sql
+		session.update("cn.wolfcode.javaweb.mappper.ProductMapper.update",pt);
+		
+		//执行事务
+		session.commit();
+		
+		//释放资源
+		session.close();
+
+	}
+
+	@Override
+	public Product selectOne(long id) {
+		//获取连接
+		SqlSession session = MybatisUtil.getConnection();
+		
+		//执行sql
+		Product product = session.selectOne("cn.wolfcode.javaweb.mappper.ProductMapper.selectOne",id);
+		
+		//释放资源
+		session.close();
+		
+		return product;
+	}
+
+	@Override
+	public List<Product> selectAll() {
+		//获取连接
+		SqlSession session = MybatisUtil.getConnection();
+		
+		//执行sql
+		List<Product> productList = session.selectList("cn.wolfcode.javaweb.mappper.ProductMapper.selectAll");
+		
+		//释放资源
+		session.close();
+		return productList;
+	}
+
+	@Override
+	public int selectForCount(QueryObject qo) {
+		//获取连接
+		SqlSession session = MybatisUtil.getConnection();
+		
+		int rows = session.selectOne("cn.wolfcode.javaweb.mappper.ProductMapper.selectForCount");
+
+		//释放资源
+		session.close();
+		return rows;
+	}
+
+	@Override
+	public List<Product> selectFotList(QueryObject qo) {
+		
+		//获取连接
+		SqlSession session = MybatisUtil.getConnection();
+		
+		//执行sql
+		session.selectList("cn.wolfcode.javaweb.mappper.ProductMapper.selectFotList",qo);
+		
+		//释放资源
+		session.close();
+		return null;
+	}
+
+}

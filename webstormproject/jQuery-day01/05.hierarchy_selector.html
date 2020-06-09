@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery 层次获取器</title>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+	$(function () {
+		// 问题1:获取所有ul下的所有li元素,并分析结果
+		console.log($('ul li'));
+
+		// 问题2:获取id为myul下的所有子li元素,并分析结果
+		console.log($('#myul > li'));
+		// 问题3:获取所有label元素后的input元素,并分析结果
+		console.log($('label ~ input'));
+		// 问题4:获取紧跟着label元素后的input元素,并分析结果
+		console.log($('label + input'));
+	});
+</script>
+<style type="text/css"> .selected{background-color: gray;}</style>
+</head>
+<body>
+	<ul id="myul">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>
+			<ul>
+				<li>item1</li>
+				<li>item2</li>
+				<li>item3</li>
+				<li>item4</li>
+			</ul>
+		</li>
+	</ul>
+
+	<label>LABEL1</label><input type="text" value="text1"/><input type="text" value="text2"/><br/>
+	<label>LABEL2</label><input type="text" value="text3"/><input type="text" value="text4"/><br/>
+	<label>LABEL3<input type="text" value="text5"/><input type="text" value="text6"/></label>
+
+	<hr/>
+	<div>
+		<p>
+			问题1:获取所有ul下的所有li元素,并分析结果
+			
+		</p>
+		<p>
+			问题2:获取id为myul下的所有子li元素,并分析结果
+			
+		</p>
+		<p>
+			问题3:获取所有label元素后的input元素,并分析结果
+
+		</p>
+		<p>
+			问题4:获取紧跟着label元素后的input元素,并分析结果
+
+		</p>
+	</div>
+</body>
+</html>

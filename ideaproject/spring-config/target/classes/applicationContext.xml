@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--IOC 将bean交给spring容器-->
+    <bean id="SomeBean" class="cn.wolfcode._01_xml.SomeBean"></bean>
+    <bean id="otherBean" class="cn.wolfcode._06_import.OtherBean"></bean>
+</beans>

@@ -1,0 +1,5 @@
+package cn.wolfcode.rbac.mapper;
+
+public interface AccountMapper {
+	void addBalance();
+}

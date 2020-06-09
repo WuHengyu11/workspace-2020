@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-bind:title="title">看这里,看这里</span>
+        <span :title="title">看这里,看这里</span>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            title:"看见了"
+        }
+
+    })
+</script>
+</html>

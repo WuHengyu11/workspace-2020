@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.wolfcode</groupId>
+  <artifactId>maven-web</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<configuration>
+			<source>1.8</source><!-- 更新项目（Maven | Update Project）之后，会修改项目的编译版本 -->
+			<target>1.8</target><!-- 更新项目之后，会修改项目的运行版本 -->
+			<encoding>utf-8</encoding><!-- 更新项目之后，Java 编译器读取你的文件用的编码 -->
+			</configuration>
+		</plugin>
+		
+		<plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.1</version>
+			<configuration>
+				<port>80</port> <!-- 端口 -->
+				<path>/</path> <!-- 上下路径 -->
+				<uriEncoding>UTF-8</uriEncoding> <!-- 针对 GET 方式乱码处理 -->
+			</configuration>
+		</plugin>
+  	</plugins>
+  </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>javax.servlet</groupId>
+  		<artifactId>javax.servlet-api</artifactId>
+  		<version>3.1.0</version>
+  		<scope>provided</scope>
+  	</dependency>
+  </dependencies>
+</project>

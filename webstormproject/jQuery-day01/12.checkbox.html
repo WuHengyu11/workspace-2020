@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>checkbox</title>
+<script type="text/javascript"  src="js/jquery-1.11.3.min.js" ></script>
+<script>
+	//全选或全不选
+	function checkChange(inputEle) {
+		//找到多少个改多少个
+		$('[name=hobby]').prop('checked',$(inputEle).prop('checked'));
+	}
+
+	//全选或全不选
+	function checkAll(flag) {
+		//找到多少个改多少个
+		$('[name=hobby]').prop('checked',flag);
+		$('#checkAll').prop('checked',flag)
+	}
+
+	//反选
+	function checkUnAll() {
+		//找到多少个改多少个
+		$('[name=hobby]').prop('checked',function (i,value) {
+			return !value;
+		});
+		myFunction();
+	}
+
+	//检测所有爱好是否选中,若选中,把checkAll改成选中,否则不选中
+	function myFunction(){
+		//定义一个局部变量true
+		let result = true;
+		$("[name=hobby]").each(function (i, value){
+			result = result && $(value).prop("checked");
+		});
+		$("#checkAll").prop("checked", result);
+	}
+
+	$(function () {
+		$("[name=hobby]").change(function () {
+			myFunction();
+		})
+	})
+</script>
+</head>
+<body>
+	请选择你的爱好:<br/>
+	<input type="checkbox" onchange="checkChange(this)" id="checkAll"/>全选/全不选<br/>
+	<div>
+		<input type="checkbox" name="hobby"/>JAVA&nbsp;
+		<input type="checkbox" name="hobby"/>打篮球&nbsp;
+		<input type="checkbox" name="hobby"/>上网&nbsp;
+		<input type="checkbox" name="hobby"/>撩妹&nbsp;
+	</div>
+	
+	<div>
+		<input type="button" id="btn_checkAll" onclick="checkAll(true)" value="全选"/>
+		<input type="button" onclick="checkAll(false)" value="全不选"/>
+		<input type="button" onclick="checkUnAll()" value="反选"/>
+	</div>
+</body>
+</html>

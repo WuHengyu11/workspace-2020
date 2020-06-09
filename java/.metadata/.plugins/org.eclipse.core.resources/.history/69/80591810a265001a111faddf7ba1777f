@@ -1,0 +1,10 @@
+package cn.wolfcode.javaweb.query;
+
+/**
+ * f封装用户传过来的参数
+ * @author Administrator
+ *
+ */
+public class QueryObject {
+
+}

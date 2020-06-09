@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.wolfcode.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="cn.wolfcode.domain.User" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.wolfcode.domain.User" useGeneratedKeys="true" keyProperty="id" >
+    insert into user (username, email, age
+      )
+    values (#{username,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="cn.wolfcode.domain.User" >
+    update user
+    set username = #{username,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, username, email, age
+    from user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, username, email, age
+    from user
+  </select>
+  <sql id="where_sql">
+    <where>
+      <if test="keyword != null">
+        and (username like concat('%',#{keyword},'%') or email like concat('%',#{keyword},'%'))
+      </if>
+      <if test="minAge != null">
+        and age &gt;= #{minAge}
+      </if>
+      <if test="maxAge != null">
+        and age &lt;= #{maxAge}
+      </if>
+    </where>
+  </sql>
+    <select id="queryForCount" resultType="java.lang.Integer">
+      select count(*)
+      from user
+      <include refid="where_sql"></include>
+    </select>
+  <select id="queryForList" resultType="cn.wolfcode.domain.User">
+    select id, username, email, age
+    from user
+    <include refid="where_sql"></include>
+    limit #{start},#{pageSize}
+  </select>
+</mapper>

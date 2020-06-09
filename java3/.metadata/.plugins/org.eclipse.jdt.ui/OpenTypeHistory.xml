@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=spring-day01-homework/src\/main\/java&lt;cn.wolfcode.register.dao{IStudentDAO.java[IStudentDAO" modifiers="513" timestamp="1585228414237"/>
+<typeInfo handle="=spring-day01-homework/D:\/developTools\/mvn\/reps\/org\/springframework\/spring-beans\/5.0.8.RELEASE\/spring-beans-5.0.8.RELEASE.jar&lt;org.springframework.beans.factory.support(InstantiationStrategy.class[InstantiationStrategy" modifiers="1537" timestamp="1582525091066"/>
+<typeInfo handle="=spring-day01-homework/src\/main\/java&lt;cn.wolfcode.register.service{IStudentService.java[IStudentService" modifiers="513" timestamp="1585229011938"/>
+<typeInfo handle="=spring-day01-homework/D:\/developTools\/mvn\/reps\/com\/alibaba\/druid\/1.1.9\/druid-1.1.9.jar&lt;com.alibaba.druid.pool(DruidDataSource.class[DruidDataSource" modifiers="33" timestamp="1585229544325"/>
+<typeInfo handle="=spring-day01-homework/D:\/developTools\/mvn\/reps\/org\/springframework\/spring-core\/5.0.8.RELEASE\/spring-core-5.0.8.RELEASE.jar&lt;org.springframework.core.io(InputStreamSource.class[InputStreamSource" modifiers="1537" timestamp="1582525092689"/>
+<typeInfo handle="=rbac-xml/src\/main\/java&lt;cn.wolfcode.rbac.service{IAccountService.java[IAccountService" modifiers="513" timestamp="1585488562573"/>
+</typeInfoHistroy>

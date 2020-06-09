@@ -1,0 +1,9 @@
+package cn.wolfcode.rbac.test;
+
+import org.springframework.test.context.ContextConfiguration;
+
+@run
+@ContextConfiguration("classpath:applciationContext.xml")
+public class AccountTest {
+
+}

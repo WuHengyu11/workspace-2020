@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.mybatis.mapper.EmployeeMapper">
+	<insert id="save" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO employee (name,deptId) VALUES(#{name},#{dept.id})
+	</insert>
+	<resultMap type="Employee" id="baseResultMap">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<association javaType="Department" property="dept" column="deptId" select="cn.wolfcode.mybatis.mapper.DepartmentMapper.get"/>
+	</resultMap>
+	<select id="get" resultMap="baseResultMap">
+		SELECT * FROM employee WHERE id = #{id}
+	</select>
+</mapper>

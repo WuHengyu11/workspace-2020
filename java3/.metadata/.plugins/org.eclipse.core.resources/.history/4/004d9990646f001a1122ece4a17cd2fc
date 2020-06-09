@@ -1,0 +1,5 @@
+package cn.wolfcode.register.dao.service;
+
+public interface IStudentService {
+
+}

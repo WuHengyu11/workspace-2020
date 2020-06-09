@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/jquery/jquery.js"></script>
+    <script src="../../js/jquery-form/jquery.form.js"></script>
+</head>
+<body>
+<div id="app">
+    <form id="formId">
+        <input type="hidden" name="id">
+        名称：<input type="text" name="name"><br>
+        年龄：<input type="text" name="age"><br>
+        爱好：
+        <input type="checkbox" name="hobby" value="c">c
+        <input type="checkbox" name="hobby" value="go">go
+        <input type="checkbox" name="hobby" value="pyhon">python
+        <input type="checkbox" name="hobby" value="java">java<br>
+
+        <input type="button" id="btn" @click="submitClick()" value="提交"></input>
+    </form>
+</div>
+<script>
+    var baseUrl="http://localhost:8888/";
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            
+        },
+        methods:{
+            submitClick:function () {
+                $("#formId").ajaxSubmit({
+                    url:baseUrl + "/users/saveOrUpdate",
+                    type:"POST",
+                    success:function (data) {
+                        if(data.success){
+                            window.location.href="/vue_demo/views/demo/list.html"
+                        }else {
+                            alert("操作失败");
+                        }
+                    }
+                });
+            }
+        }
+    })
+</script>
+</body>
+</html>

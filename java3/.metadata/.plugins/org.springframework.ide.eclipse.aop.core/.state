@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="springmvc-day01"/>
+<aop-project name="rbac"/>
+<aop-project name="springmvc-day01hello"/>
+<aop-project name="rbac1"/>
+<aop-project name="spring-day02-homework"/>
+<aop-project name="rbac-xml"/>
+<aop-project name="rbac-xml1"/>
+<aop-project name="spring-jdk-proxy"/>
+<aop-project name="spring-day01"/>
+<aop-project name="spring-day01-homework"/>
+<aop-project name="springmvc-knowledge"/>
+</aop-reference-model>

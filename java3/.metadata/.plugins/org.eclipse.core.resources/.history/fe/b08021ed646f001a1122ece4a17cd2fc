@@ -1,0 +1,13 @@
+package cn.wolfcode.register.service.impl;
+
+import cn.wolfcode.register.service.IStudentService;
+
+public class StudentServiceImpl implements IStudentService {
+	private IStudentDAO studentDAO;
+	@Override
+	public void register(String username, String password) {
+		
+
+	}
+
+}

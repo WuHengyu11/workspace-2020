@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<!-- 配置事务模拟器对象 -->
+	<bean id="tx" class="cn.wolfcode.spring.tx.MyTxManager"/>
+
+	<!-- 配置代理对象， 告诉真实对象是谁  中介-->
+	<bean id="employeeServiceProxy" class="cn.wolfcode.spring.service.impl.EmployeeServiceProxy">
+		<property name="target">
+			<!-- 配置真实对象 房东 -->
+			<bean class="cn.wolfcode.spring.service.impl.EmployeeServiceImpl"/>
+		</property>
+		<property name="tx" ref="tx"/>
+	</bean>
+	
+</beans>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link href="/styles/base.css" rel="stylesheet" type="text/css">
+    <link href="/styles/regist.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/js/plugins/jquery-form/jquery.form.js"></script>
+    <script src="/js/plugins/js-cookie/js.cookie.min.js"></script>
+    <script src="/js/vue/md5.js"></script>
+    <script type="text/javascript" src="/js/vue/common.js"></script>
+    <script type="text/javascript" src="/js/system/regist.js"></script>
+
+</head>
+<body>
+<script>
+    $(function () {
+        ajaxGet("/users/getCurrentUser",{},function (data) {
+            console.log(data);
+        });
+        /*ajaxGet("/currentUser", {}, function (data) {
+            console.log(data);
+        })*/
+
+       /* ajaxGet("/travel/info", {}, function (data) {
+            console.log(data, 1);
+        })
+
+        ajaxGet("/travel/userUpdate", {}, function (data) {
+            console.log(data, 2);
+        })
+*/
+
+        ajaxGet("/test1", {aa:1, bb:2, cc:3}, function (data) {
+            console.log(data, 2);
+        })
+
+    })
+
+</script>
+
+
+
+</body>
+</html>

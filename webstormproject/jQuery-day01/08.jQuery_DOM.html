@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<!-- 引入jQuery -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+	//追加
+	$(function (){
+		$("#append").click(function() {
+			// 追加儿子元素
+			$("#div1").append($("#span"));
+		});
+
+		$("#after").click(function() {
+			// 追加弟弟
+			$("#div2").after($("#span"));
+		});
+
+		$("#empty").click(function() {
+			$("#ul").empty();
+		});
+
+
+		$("#btn").click(function(){
+			console.log(1);
+		});
+
+		//定义变量
+		var $btn;
+
+		// 删除
+		$("#remove").click(function() {
+			$btn = $("#btn").detach();
+		});
+		// 恢复
+		$("#resume").click(function() {
+			$("#ul").after($btn);
+		});
+
+		// 获取值
+		$("#getAttr").click(function(){
+			console.log($("#btn").attr("type"));
+		});
+		// 设置属性值
+		$("#setAttr").click(function(){
+			$("#btn").attr("value", "Hello World");
+		});
+
+
+		$("#addClass").click(function(){
+			$("#btn").addClass("myBtn");
+		});
+
+		$("#removeClass").click(function(){
+			$("#btn").removeClass("myBtn");
+		});
+
+		$("#toggleClass").click(function(){
+			$("#btn").toggleClass("myBtn");
+		});
+
+		$("#hasClass").click(function(){
+			$("#btn").hasClass("myBtn");
+		});
+
+		console.log($("#gender").val());
+		console.log($("#gender").css("color"));
+		$("#gender").removeClass("other");
+		console.log($("#gender").prop("checked"));
+		console.log($("#gender").data("option"));
+	});
+</script>
+<style type="text/css">
+	.other {
+		background-color: orange;
+		font-size: 20px;
+	}
+	.myBtn{
+		background-color: red;
+	}
+</style>
+</head>
+<body>
+	<span style="background-color : blue;color: red;" id="span">SPAN</span>
+	<div id="div1" style="background-color: gray;">DIV1</div>
+	<div id="div2" style="background-color: green;">DIV2</div>
+	
+	<ul id="ul">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+	</ul>
+		
+	<input id="btn" type="button" value="删除我"/> 
+
+	<form>
+  		<fieldset>
+    		<legend>内部插入节点(插入子节点)</legend>
+	  		<input type="button" value="append" id="append"/>
+  		</fieldset>
+	</form>
+
+	<form>
+  		<fieldset>
+    		<legend>外部插入节点(插入兄弟节点)</legend>
+	  		<input type="button" value="after" id="after"/>
+  		</fieldset>
+	</form>
+
+	<form>
+  		<fieldset>
+    		<legend>删除节点</legend>
+			<input type="button" value="删除所有子节点" id="empty"/>
+	  		<input type="button" value="删除节点" id="remove"/>		
+	  		<input type="button" value="恢复节点" id="resume"/>
+  		</fieldset>
+	</form>
+
+	<form>
+  		<fieldset>
+    		<legend>属性操作</legend>
+	  		<input type="button" value="获取属性值" id="getAttr"/>
+	  		<input type="button" value="设置属性值" id="setAttr"/>
+  		</fieldset>
+	</form>
+
+	<form>
+  		<fieldset>
+    		<legend>CSS操作</legend>
+	  		<input type="button" value="添加CSS" id="addClass"/>
+	  		<input type="button" value="删除CSS" id="removeClass"/>
+	  		<input type="button" value="轮换CSS" id="toggleClass"/>
+	  		<input type="button" value="判断CSS" id="hasClass"/>
+  		</fieldset>
+	</form>
+
+</body>
+</html>

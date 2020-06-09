@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 使用namespace+sqlid来标识唯一一条SQL -->
+<mapper namespace="cn.wolfcode.javaweb.mappper.ProductMapper">
+	<!-- 定义插入语句 -->
+	<insert id="insert">
+		insert into product values(null,#{productName},#{dir_id},#{salePrice},#{supplier},#{brand},#{cutoff},#{costPrice})
+	</insert>
+	
+	<!-- 定义删除语句 -->
+	<delete id="delete">
+		delete from product where id = #{id}
+	</delete>
+	
+	<!-- 定义更新语句 -->
+	<update id="update">
+		update product set
+			productName = #{productName},
+		 	dir_id = #{dir_id},
+		 	salePrice = #{salePrice},
+		 	supplier = #{supplier},
+		 	brand = #{brand},
+		 	cutoff = #{cutoff},
+		 	costPrice = #{costPrice} where id = #{id}
+	</update>
+	
+	<select id="selectOne" resultType="product">
+		select * from product where id = #{id}
+	</select>
+	
+	<select id="selectAll" resultType="product">
+		select* from product
+	</select>
+	
+	<select id="selectForCount" resultType="int">
+		select count(*) from product
+	</select>
+	
+	<select id="selectFotList" resultType="int">
+		select count(*) from product
+	</select>
+</mapper>

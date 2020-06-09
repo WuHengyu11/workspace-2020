@@ -1,0 +1,21 @@
+package cn.wolfcode.rbac.service.impl;
+
+import java.math.BigDecimal;
+
+import cn.wolfcode.rbac.mapper.AccountMapper;
+import cn.wolfcode.rbac.service.IAccountService;
+
+public class AccountServiceImpl implements IAccountService {
+
+	private AccountMapper accountMapper;
+	public void setAccountMapper(AccountMapper accountMapper) {
+		this.accountMapper = accountMapper;
+	}
+	
+	@Override
+	public void transfer(Long outId, Long inId, BigDecimal amount) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

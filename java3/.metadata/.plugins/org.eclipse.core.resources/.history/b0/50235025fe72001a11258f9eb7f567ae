@@ -1,0 +1,9 @@
+package cn.wolfcode.web.controller;
+
+import org.springframework.web.servlet.ModelAndView;
+
+public class HelloController {
+	public ModelAndView sayHello(){
+		
+	}
+}

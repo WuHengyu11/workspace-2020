@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.dept.mapper.DepartmentMapper">
+
+    <insert id="insert">
+        insert into department values (null,#{name},#{sn});
+    </insert>
+    <update id="update">
+        update department set name = #{name},sn = #{sn} where id = #{id}
+    </update>
+    <delete id="delete">
+        delete from department where id = #{id}
+    </delete>
+    <select id="get" resultType="cn.wolfcode.dept.domain.Department">
+        select * from department where id = #{id}
+    </select>
+    <select id="listAll" resultType="cn.wolfcode.dept.domain.Department">
+        select * from department
+    </select>
+</mapper>

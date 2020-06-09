@@ -1,0 +1,8 @@
+cn\wolfcode\qo\QueryObject.class
+cn\wolfcode\qo\PageResult.class
+cn\wolfcode\web\controller\HeroController.class
+cn\wolfcode\service\impl\HeroServiceImpl.class
+cn\wolfcode\domain\Hero.class
+cn\wolfcode\mapper\HeroMapper.class
+cn\wolfcode\service\IHeroService.class
+cn\wolfcode\qo\HeroQueryObject.class

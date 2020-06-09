@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-model="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="u in users" v-on:click="choseClick($event,u.id,u.name)">
+                {{u.id}}-{{u.name}}-{{u.age}}-{{u.sex==1?'男':'女'}}
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for="u in users" v-on:click="choseClick($event,u.id,u.name)">
+                {{u.id}}-{{u.name}}-{{u.age}}-{{u.sex | sexFormat}}
+            </li>
+        </ul>
+
+    </div>
+    <script>
+        var vue = new Vue({
+            el:"#app",
+            data:{
+                users:[
+                    {id:1,name:'dafei', age:18, sex:1},
+                    {id:2,name:'xiaofei', age:17, sex:1},
+                    {id:3,name:'huisiji', age:18, sex:0},
+                    {id:4,name:'xiaoxue', age:19, sex:0}
+                ]
+            },
+            methods:{
+            },
+            filters:{
+                sexFormat:function (value) {
+                    return value == 1 ? "男":"女";
+                }
+            },
+            mounted:function () {
+            }
+        })
+    </script>
+
+</body>
+</html>

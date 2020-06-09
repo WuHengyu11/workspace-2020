@@ -1,0 +1,5 @@
+package cn.wolfcode.javaweb.query;
+
+public class ProductQueryObject {
+	private String productName;
+}

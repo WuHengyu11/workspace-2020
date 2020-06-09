@@ -1,0 +1,30 @@
+package cn.wolfcode.calculator;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CalculatorServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+	
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		
+		//设置请求编码格式
+		req.setCharacterEncoding("UTF-8");
+		//设置响应数据的格式
+		res.setContentType("text/htm;charset=UTF-8");
+		
+		String parameter1 = req.getParameter("parameter1");
+		String parameter2 = req.getParameter("parameter2");
+		String jisuan = req.getParameter("jisuan");
+		System.out.println(parameter1);
+		System.out.println(parameter2);
+		System.out.println(jisuan);
+	}
+
+}

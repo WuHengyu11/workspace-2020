@@ -1,0 +1,13 @@
+package cn.wolfcode.web.controller;
+
+import org.springframework.web.servlet.ModelAndView;
+
+public class HelloController {
+	public ModelAndView sayHello(){
+		//创建视图模型对象
+		ModelAndView mv = new ModelAndView();
+		//设置视图名称
+		mv.setViewName("/WEB_INF/views/welcome.jsp");
+		
+	}
+}

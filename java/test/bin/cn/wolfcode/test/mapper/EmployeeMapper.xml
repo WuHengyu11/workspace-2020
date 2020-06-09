@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 使用namespace+sqlid来标识唯一一条SQL -->
+<mapper namespace="cn.wolfcode.test.mapper.EmployeeMapper">
+	<!-- 定义插入语句 -->
+	<insert id="insert">
+		insert into employee values(null,#{name},#{email},#{age},#{salary})
+	</insert>
+	
+	<!-- 定义删除语句 -->
+	<delete id="delete">
+		delete from employee where id = #{id}
+	</delete>
+	
+	<!-- 定义更新语句 -->
+	<update id="update">
+		update employee set name = #{name},email=#{email},age=#{age},salary=#{salary} where id = #{id}
+	</update>
+	
+	<select id="selectOne" resultType="employee">
+		select * from employee where id = #{id}
+	</select>
+	
+	<select id="selectAll" resultType="employee">
+		select* from employee
+	</select>
+</mapper>

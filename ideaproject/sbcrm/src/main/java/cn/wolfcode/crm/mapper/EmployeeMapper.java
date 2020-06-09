@@ -1,0 +1,20 @@
+package cn.wolfcode.crm.mapper;
+
+import cn.wolfcode.crm.domain.Employee;
+import cn.wolfcode.crm.query.EmployeeQueryObject;
+
+import java.util.List;
+
+public interface EmployeeMapper {
+    int deleteByPrimaryKey(Long id);
+
+    int insert(Employee record);
+
+    Employee selectByPrimaryKey(Long id);
+
+    List<Employee> selectAll();
+
+    int updateByPrimaryKey(Employee record);
+
+    List<Employee> selectForList(EmployeeQueryObject qo);
+}

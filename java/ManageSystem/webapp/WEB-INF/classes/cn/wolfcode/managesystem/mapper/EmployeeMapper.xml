@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.managesystem.mapper.EmployeeMapper">
+	<!-- 数据插入 -->
+	<insert id="insert">
+		insert into employee values(null,#{name},#{email},#{age},#{salary},#{img_path},#{dep_id})
+	</insert>
+	
+	<!-- 数据删除 -->
+	<delete id="delete">
+		delete from employee where id = #{id}
+	</delete>
+	
+	<!-- 数据更新 -->
+	<update id="update">
+		update employee set
+			name = #{name},
+			email = #{email},
+			age = #{age},
+			salary = #{salary},
+			img_path = #{img_path},
+			dep_id = #{dep_id}
+			where id = #{id}
+	</update>
+	
+	<!-- 单条数据查询 -->
+	<select id="selectOne" resultType="employee">
+		select * from employee where id = #{id}
+	</select>
+	
+	<!-- 查询总条数 -->
+	<select id="selectForCount" resultType="int">
+		select count(*) from employee
+	</select>
+	
+	<!-- 分页查询 -->
+	<select id="queryForList" resultType="employee">
+		select * from employee limit #{start},#{pageSize}
+	</select>
+	
+	<!-- 查询部门编号 -->
+	<select id="selectDepartment" resultType="string">
+		select dep_name from t_department where dep_id = (select dep_id from employee where id= #{id})
+	</select>
+</mapper>

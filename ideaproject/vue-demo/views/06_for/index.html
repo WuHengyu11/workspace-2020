@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-model="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in arr">{{item}}</li>
+        </ul>
+        <ul>
+            <li v-for="(item,index) in arr">{{item}}--{{index}}</li>
+        </ul>
+        <ul>
+            <li v-for="(u,i) in users">
+                {{i}}--{{u.id}},--{{u.name}},--{{u.sex==1?"男":"女"}}
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            arr:["a","b","c","d","e"],
+            users:[
+                {id:1,name:"guanyu",sex:1},
+                {id:2,name:"zhangfei",sex:1},
+                {id:3,name:"zhaoyun",sex:0},
+                {id:4,name:"machao",sex:0},
+                {id:5,name:"huangzhong",sex:1}
+            ]
+        }
+
+    })
+</script>
+</html>

@@ -1,0 +1,17 @@
+package cn.wolfcode.register.dao.impl;
+
+import javax.sql.DataSource;
+
+import cn.wolfcode.register.dao.IStudentDAO;
+
+public class StudentDAOImpl implements IStudentDAO {
+
+	private DataSource dataSource;
+	@Override
+	public void register(String username, String password) {
+		//使用JDBC连接数据库
+		dataSource.getConnection();
+
+	}
+
+}

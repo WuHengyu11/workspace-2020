@@ -1,0 +1,13 @@
+package cn.wolfcode.register.dao.impl;
+
+import cn.wolfcode.register.dao.IStudentDAO;
+
+public class StudentDAOImpl implements IStudentDAO {
+
+	@Override
+	public void register(String username, String password) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

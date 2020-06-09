@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-model="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-if="age > 18">欢迎光临</span>
+        <span v-else-if="age < 18">谢绝访问</span>
+        <span v-else="age == 18">有些为难</span>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            age:18
+        }
+
+    })
+</script>
+</html>

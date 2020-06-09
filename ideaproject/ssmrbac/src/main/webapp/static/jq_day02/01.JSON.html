@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //表示第一个员工:id=1,name=刘备
+        var jsonString1 = '{"id":1,"name":"刘备"}';
+
+        //表示多个员工:id=1,name=刘备;id=2,name=关羽
+        var jsonString2 = '[{"id":1,"name":"刘备"},{"id":2,"name":"关羽"}]';
+
+        //表示一个员工:id=1,name=刘备; id=10,cname="蜀国"
+        var jsonString3 = '{{"id":1,"name":"刘备","company":{"id":10,"cname":"蜀国"}}}'
+        var jsonString4 = '{"id":1,"name":"刘备","hobbies":["打仗","喝酒"]}'
+        console.log(jsonString1);
+        console.log(jsonString1.name);
+        console.log('----------------------------');
+        console.log(JSON.parse(jsonString1).name);
+        console.log('----------------------------');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+package cn.wolfcode.javaweb.query;
+
+import java.math.BigDecimal;
+
+public class ProductQueryObject extends QueryObject {
+	private String productName;
+	private BigDecimal minSalePrice;
+	private BigDecimal maxSalePrice;
+}

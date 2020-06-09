@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.wolfcode.mapper.HeroMapper" >
+  <resultMap id="BaseResultMap" type="cn.wolfcode.domain.Hero" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="nickname" property="nickname" jdbcType="VARCHAR" />
+    <result column="hp" property="hp" jdbcType="INTEGER" />
+    <result column="mp" property="mp" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from hero
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.wolfcode.domain.Hero" useGeneratedKeys="true" keyProperty="id" >
+    insert into hero (name, nickname, hp, 
+      mp)
+    values (#{name,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, #{hp,jdbcType=INTEGER}, 
+      #{mp,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="cn.wolfcode.domain.Hero" >
+    update hero
+    set name = #{name,jdbcType=VARCHAR},
+      nickname = #{nickname,jdbcType=VARCHAR},
+      hp = #{hp,jdbcType=INTEGER},
+      mp = #{mp,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, name, nickname, hp, mp
+    from hero
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, name, nickname, hp, mp
+    from hero
+  </select>
+
+  <sql id="where_sql">
+    <where>
+      <if test="keyword != null">
+        and (name like concat('%',#{keyword},'%') or nickname like concat('%',#{keyword},'%'))
+      </if>
+      <if test="minHp != null">
+        and hp &gt;= #{minHp}
+      </if>
+      <if test="maxHp != null">
+        and hp &lt;= #{maxHp}
+      </if>
+    </where>
+  </sql>
+    <select id="queryForCout" resultType="java.lang.Integer">
+      select count(*)
+      from hero
+      <include refid="where_sql"></include>
+    </select>
+  <select id="queryForList" resultType="cn.wolfcode.domain.Hero">
+    select id, name, nickname, hp, mp
+    from hero
+    <include refid="where_sql"></include>
+    limit #{start},#{pageSize}
+  </select>
+
+</mapper>

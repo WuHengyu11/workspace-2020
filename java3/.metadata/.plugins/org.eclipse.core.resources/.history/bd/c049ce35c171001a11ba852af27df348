@@ -1,0 +1,13 @@
+package cn.wolfcode.rbac.service;
+
+import java.math.BigDecimal;
+
+public interface AccountService {
+	/**
+	 * 转账
+	 * @param outId 出钱的账户
+	 * @param inId
+	 * @param amount
+	 */
+	void transfer(Long outId, Long inId, BigDecimal amount);
+}
