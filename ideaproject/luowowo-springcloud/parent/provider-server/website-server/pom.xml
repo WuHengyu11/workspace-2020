@@ -11,4 +11,11 @@
 
     <artifactId>website-server</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.wolfcode.springcloud.luowowo</groupId>
+            <artifactId>member-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 </project>

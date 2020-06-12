@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="product-server" />
-        <module name="eureka-server" />
         <module name="product-api" />
+        <module name="eureka-server" />
         <module name="order-server" />
         <module name="zuul-server" />
       </profile>

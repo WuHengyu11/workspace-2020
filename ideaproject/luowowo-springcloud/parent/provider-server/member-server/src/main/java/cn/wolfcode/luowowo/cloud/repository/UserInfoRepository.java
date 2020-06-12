@@ -16,11 +16,4 @@ public interface UserInfoRepository extends MongoRepository<UserInfo,String> {
      */
     UserInfo findByPhone(String phone);
 
-    /**
-     * 用户登录
-     * @param username
-     * @param password
-     * @return
-     */
-    UserInfo findByPhoneAndPassword(String username, String password);
 }

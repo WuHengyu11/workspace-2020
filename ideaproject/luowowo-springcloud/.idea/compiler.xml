@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="memberserver" />
+        <module name="eureka-server" />
+        <module name="common" />
+        <module name="website-frontend" />
+        <module name="zuul-server" />
+        <module name="memberapi" />
+        <module name="websiteserver" />
+        <module name="config-server" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="memberapi" options="-parameters" />
+      <module name="memberserver" options="-parameters" />
+      <module name="provider-api" options="-parameters" />
+      <module name="provider-server" options="-parameters" />
+      <module name="website-frontend" options="-parameters" />
+      <module name="websiteserver" options="-parameters" />
+      <module name="zuul-server" options="-parameters" />
+    </option>
+  </component>
+</project>

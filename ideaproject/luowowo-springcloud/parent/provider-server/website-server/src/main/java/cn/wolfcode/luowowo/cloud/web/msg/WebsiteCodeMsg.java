@@ -9,4 +9,5 @@ public class WebsiteCodeMsg extends CodeMsg {
         super(code,msg);
     }
    public static final WebsiteCodeMsg DEFAULT_ERROR = new WebsiteCodeMsg(500100,"聚合服务繁忙");
+   public static final WebsiteCodeMsg MEMBER_SERVER_ERROR = new WebsiteCodeMsg(500101,"会员服务繁忙");
 }
