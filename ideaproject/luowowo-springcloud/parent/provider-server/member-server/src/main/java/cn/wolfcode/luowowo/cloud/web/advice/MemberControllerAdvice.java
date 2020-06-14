@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class MemberControllerAdvice extends CommonControllerAdvice {
     @ExceptionHandler(Exception.class)
     public Result handleException(Exception ex){
+        ex.printStackTrace();
         return Result.error(MemberCodeMsg.DEFAULT_ERROR);
     }
 }

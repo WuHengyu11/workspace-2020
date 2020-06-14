@@ -14,6 +14,7 @@
     <modules>
         <module>website-server</module>
         <module>member-server</module>
+        <module>msg-server</module>
     </modules>
     <dependencies>
         <dependency>

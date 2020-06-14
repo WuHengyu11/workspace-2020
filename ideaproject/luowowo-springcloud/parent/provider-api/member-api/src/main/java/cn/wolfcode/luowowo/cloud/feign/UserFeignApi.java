@@ -10,4 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UserFeignApi {
     @RequestMapping("/checkPhone")
     Result<Boolean> checkPhone(@RequestParam("phone") String phone);
+
+    @RequestMapping("/regist")
+    Result regist(@RequestParam("phone")String phone, @RequestParam("nickname")String nickname, @RequestParam("password")String password, @RequestParam("rpassword")String rpassword);
 }

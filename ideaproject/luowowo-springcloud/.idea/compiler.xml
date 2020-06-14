@@ -13,8 +13,10 @@
         <module name="website-frontend" />
         <module name="zuul-server" />
         <module name="memberapi" />
+        <module name="msg-server" />
         <module name="websiteserver" />
         <module name="config-server" />
+        <module name="msg-api" />
       </profile>
     </annotationProcessing>
   </component>
@@ -25,6 +27,8 @@
       <module name="eureka-server" options="-parameters" />
       <module name="memberapi" options="-parameters" />
       <module name="memberserver" options="-parameters" />
+      <module name="msg-api" options="-parameters" />
+      <module name="msg-server" options="-parameters" />
       <module name="provider-api" options="-parameters" />
       <module name="provider-server" options="-parameters" />
       <module name="website-frontend" options="-parameters" />

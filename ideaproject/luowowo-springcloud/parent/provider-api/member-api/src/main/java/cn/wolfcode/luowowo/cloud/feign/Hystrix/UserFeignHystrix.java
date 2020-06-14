@@ -10,4 +10,9 @@ public class UserFeignHystrix implements UserFeignApi {
     public Result<Boolean> checkPhone(String phone) {
         return null;
     }
+
+    @Override
+    public Result regist(String phone, String nickname, String password, String rpassword) {
+        return null;
+    }
 }

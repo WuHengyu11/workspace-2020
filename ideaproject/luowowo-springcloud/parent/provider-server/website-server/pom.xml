@@ -17,5 +17,10 @@
             <artifactId>member-api</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>cn.wolfcode.springcloud.luowowo</groupId>
+            <artifactId>msg-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 </project>

@@ -16,7 +16,8 @@ $(function () {
 
             $.get(domainUrl + "/users/checkPhone", {phone:val}, function (data) {
                 if (data.code == 200){
-                    if(data){
+                    console.log(data.data);
+                    if(!data.data){
                         $('#inputPassword').next().text('').hide()
                         $('.login-box').hide()
                         $('.signup-box').show()
@@ -54,7 +55,7 @@ $(function () {
             }, 6000);
 
             var phone = $("#phone").val();
-            $.get(domainUrl + "/users/sendVerifyCode", {phone:phone}, function (data) {
+            $.get(domainUrl + "/sms/sendVerifyCode", {phone:phone}, function (data) {
 
                 console.log(data);
                 if(data.code == 200){

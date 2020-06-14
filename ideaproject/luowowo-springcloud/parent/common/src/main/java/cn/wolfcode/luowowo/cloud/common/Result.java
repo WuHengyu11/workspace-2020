@@ -31,4 +31,8 @@ public class Result<T> {
     public static Result error(CodeMsg codeMsg){
         return new Result(codeMsg.getCode(),codeMsg.getMsg(),null);
     }
+
+    public Boolean hasError(){
+        return !DEFAULT_SUCCESS_CODE.equals(this.getCode());
+    }
 }

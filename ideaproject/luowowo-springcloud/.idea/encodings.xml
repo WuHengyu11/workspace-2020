@@ -7,8 +7,10 @@
     <file url="file://$PROJECT_DIR$/parent/eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parent/provider-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parent/provider-api/member-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/provider-api/msg-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parent/provider-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parent/provider-server/member-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/provider-server/msg-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parent/provider-server/website-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parent/zuul-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/website-frontend" charset="UTF-8" />

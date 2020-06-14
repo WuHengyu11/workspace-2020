@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>member-api</module>
+        <module>msg-api</module>
     </modules>
 
     <dependencies>
